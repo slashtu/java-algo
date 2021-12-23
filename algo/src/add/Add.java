@@ -1,16 +1,23 @@
 package add;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Add {
   public int add(int a, int b) {
       return a + b;
   }
 
   public static void main(String[] args) throws Exception {
-      Add add = new Add();
+      Map<Integer, Integer> map = new HashMap<>();
 
-      int res = add.add(4, 5);
+      map.put(1,1);
 
-      System.out.println(res);
+      Map<Integer, Integer> tmp = new HashMap(map);
+
+      tmp.put(1,0);
+
+      System.out.println(map);
   }
 }
 
